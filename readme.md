@@ -20,8 +20,7 @@ This project is an Express-based PDF editor that allows users to annotate, highl
 1.  **Clone the repository:**
 
     ```bash
-    git clone [your-repository-url]
-    cd react-pdf-editor
+    git clone [your-repository-url]  
     ```
 
 2.  **Install dependencies:**
