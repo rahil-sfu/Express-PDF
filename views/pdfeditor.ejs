@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Loadminds - Edit PDF</title>
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+  <!-- External CSS Libraries -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/blueimp-file-upload/10.7.0/css/jquery.fileupload.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" />
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="/css/merger.css">
+  <style>
+    /* Visual feedback for dragover */
+    .dragover {
+      border: 2px dashed var(--c5);
+      background-color: var(--c2);
+    }
+  </style>
+</head>
+<body>
+  <%- include('includes/nav.ejs') %>
+  
+  <div class="container main-container" style="width: 90%;">
+    <h1 class="text-center mt-5 font-weight-bold pt-4 heading-main">Edit PDF</h1>
+    <div class="row justify-content-center mt-5">
+      <div class="col-md-10 text-center">
+        <form method="POST" enctype="multipart/form-data" action="/editor" id="pdf-dropzone-form">
+          <div class="fallback">
+            <div class="custom-file-upload custom-file-upload-color-1" id="pdf-dropzone">
+              <img src="/images/pdf.png" alt="PDF Icon" width="72" height="72">
+              <label for="pdfs">Select or Drag PDF File(s)</label>
+              <!-- Note the 'multiple' attribute -->
+              <input type="file" name="pdf" id="pdfs" accept=".pdf" multiple required class="form-control-file">
+            </div>
+            <br><br>
+          </div>
+          <!-- Submit button is hidden by default -->
+          <input type="submit" value="Edit PDF" class="btn-lg common-btn pl-5 pr-5 mb-5 mt-2" style="display:none;">
+        </form>
+        <div class="container">
+          <div class="pdfhead mt-4 text-center mb-3"></div>
+          <ul id="pdf-list" class="list-group mb-4"></ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <%- include('includes/alltools.ejs') %>
+
+  <!-- Scripts -->
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="/js/editor.js"></script>
+</body>
+</html>

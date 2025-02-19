@@ -1,0 +1,146 @@
+:root {
+	--c1: #111111; /* darkest */
+	--c2: #1D1D1D; /* dark */
+	--c3: #333333; /* mid */
+	--c4: #666666; /* lighter-mid */
+	--c5: #AAAAAA; /* lightest */
+	--c6: #CFCFCF; /* near-white */
+	--c7: #FFFFFF; /* pure white */
+
+	/* A common text color for dark backgrounds */
+	--text-color: #5463ec;
+}
+
+.dragover {
+  border: 2px dashed var(--c5);
+  background-color: var(--c2);
+}
+
+
+/* MERGER / FILE-UPLOAD STYLES - GRAYSCALE THEME */
+
+/* Hide native file input */
+input[type="file"] {
+  height: 0;
+  width: 0;
+  visibility: hidden;
+  position: absolute;
+}
+
+/* The file upload container */
+.custom-file-upload {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  height: 260px;
+  margin: 0 auto;
+  cursor: pointer;
+  color: var(--text-color);
+  border-radius: 4px;
+  border: 1px solid var(--c4);
+  background-color: var(--c2);
+  font-size: 16px;
+  font-weight: bold;
+  position: relative;
+}
+
+/* The upload icon/image inside the container */
+.custom-file-upload img {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 72px;
+  height: 62px;
+  margin-right: 10px;
+}
+
+/* The label text that appears in the container */
+.custom-file-upload label {
+  margin-top: 10px;
+  color: var(--text-color);
+}
+
+/* Buttons */
+.button-2 {
+  background-color: var(--c3);
+  border-color: var(--c3);
+  color: var(--text-color);
+  transition: 0.2s;
+}
+.button-2:hover {
+  background-color: var(--c4);
+  border-color: var(--c4);
+  color: var(--text-color);
+}
+.button-2:active {
+  background-color: var(--c3);
+  border-color: var(--c3);
+  color: var(--text-color);
+}
+
+/* Alternative button styling */
+.button-3 {
+  background-color: var(--c4);
+  border-color: var(--c4);
+  color: var(--text-color);
+  transition: 0.2s;
+}
+.button-3:hover {
+  background-color: var(--c5);
+  border-color: var(--c5);
+  color: var(--c1); /* Switch text to darkest for contrast */
+}
+.button-3:active {
+  background-color: var(--c4);
+  border-color: var(--c4);
+  color: var(--text-color);
+}
+
+/* Optional color variants for the upload areas */
+.custom-file-upload-color-1 {
+  background-color: var(--c3);
+}
+.custom-file-upload-color-2 {
+  background-color: var(--c4);
+}
+.custom-file-upload-color-3 {
+  background-color: var(--c5);
+  color: var(--c1); /* black/dark text for contrast on lighter background */
+}
+
+/* The dashed border effect for the label */
+.custom-file-upload label[for="pdfs"]::before,
+.custom-file-upload label[for="pdf-input"]::before {
+  content: "";
+  position: absolute;
+  top: -15px;
+  left: -15px;
+  right: -15px;
+  bottom: -15px;
+  border: 1px dashed var(--c5);
+  cursor: pointer;
+}
+
+/* Fallback & Range Input */
+.fallback {
+  margin: 0 auto;
+}
+
+.range-box {
+  padding: 8px 20px;
+  border: 1px solid var(--c4);
+  padding-left: 15px;
+  outline: none;
+  border-radius: 5px;
+  font-size: 17px;
+  transition: all 0.3s;
+  background-color: var(--c1);
+  color: var(--text-color);
+}
+
+.range-box:focus {
+  border-color: var(--c5);
+  box-shadow: 0 0 0 2px var(--c5);
+}
