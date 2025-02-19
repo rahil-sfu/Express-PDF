@@ -53,6 +53,9 @@
     <button class="tool-button" onclick="enablePencil(event)"><i class="fa fa-pencil" title="Pencil"></i></button>
   </div>
   <div class="tool">
+	<button class="tool-button" onClick="enableEraser(event)"><i class="fa fa-eraser" title="Eraser"></i></button>
+  </div>
+  <div class="tool">
     <button class="tool-button" onclick="enableAddText(event)"><i class="fa fa-font" title="Add Text"></i></button>
   </div>
   <div class="tool">
@@ -110,6 +113,12 @@
     event.preventDefault();
     pdf.enablePencil();
   }
+
+  function enableEraser(event) {
+	event.preventDefault();
+	pdf.enableEraser();
+  }
+
 
   function enableAddText(event) {
     event.preventDefault();

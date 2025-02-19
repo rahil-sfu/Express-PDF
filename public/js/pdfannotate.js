@@ -1,8 +1,12 @@
-	/**
- * PDFAnnotate v1.0.1
- * Author: Ravisha Heshan
- */
-
+	$(document).ready(function(){
+		$('.tool-button').on('click', function(){
+		// Remove active state from all tool buttons
+		$('.tool-button.active').removeClass('active');
+		// Add active state to the clicked button
+		$(this).addClass('active');
+		});
+	});
+	
 	var PDFAnnotate = function(container_id, url, options = {}) {
 		this.number_of_pages = 0;
 		this.pages_rendered = 0;
@@ -125,6 +129,26 @@
 		}
 	}
 	
+	PDFAnnotate.prototype.enableEraser = function() {
+		console.log("enableEraser called");
+		var inst = this;
+		// Set active tool to a unique code for eraser, e.g., 5
+		inst.active_tool = 5;
+	  
+		// Define eraser settings
+		var eraserSize = 10;       // Adjust the size of the eraser brush as needed
+		var eraserColor = 'white'; // Use white to "erase" assuming a white background
+	  
+		// Enable drawing mode on all Fabric canvases and apply eraser settings
+		if (inst.fabricObjects.length > 0) {
+		  $.each(inst.fabricObjects, function(index, fabricObj) {
+			fabricObj.isDrawingMode = true;
+			fabricObj.freeDrawingBrush.width = eraserSize;
+			fabricObj.freeDrawingBrush.color = eraserColor;
+		  });
+		}
+	  };
+
 	PDFAnnotate.prototype.enableAddText = function () {
 		var inst = this;
 		inst.active_tool = 2;
@@ -289,3 +313,5 @@
 			}
 		})
 	}
+
+	
