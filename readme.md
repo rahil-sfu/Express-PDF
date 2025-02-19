@@ -11,9 +11,9 @@ This project is an Express-based PDF editor that allows users to annotate, highl
 
 ## Screenshots
 
-![Main Page Annotations](public/screenshots/Screenshot 2025-02-18 at 7.03.57 PM.png)
+![Main Page Annotations](public/screenshots/1.png)
 
-![PDF Highlighting](public/screenshots/Screenshot 2025-02-19 at 12.15.46 AM.png)
+![PDF Highlighting](public/screenshots/2.png)
  
 ## Installation
 
