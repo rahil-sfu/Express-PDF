@@ -9,12 +9,12 @@ This project is a Express-based PDF editor that allows users to annotate, highli
 *   **Saving:**  Allows users to download the modified PDF with their annotations.
 *   **User-Friendly Interface:** Intuitive design for easy navigation and use.
 
-```markdown
+
  ![Screenshot of the main page](public/screenshots/Screenshot 2025-02-18 at 7.03.57 PM.png)
- ```
-```markdown
+ 
+
  ![Screenshot of the main page](public/screenshots/Screenshot 2025-02-19 at 12.15.46 AM.png)
- ```
+ 
 ## Installation
 
 1.  **Clone the repository:**
